@@ -1,145 +1,50 @@
 /* ==========================================================================
-   M.S Solutions Design System - Variables & Tokens
-   Visual Identity: Dreamy, Oceanic, Premium, Innovative & Trustworthy
+   M.S Solutions design tokens
+   Brand colours are sampled from the official logo (navy + charcoal).
    ========================================================================== */
-
 :root {
-  /* ------------------------------------------------------------------------
-     1. Color Palette: White Theme with Oceanic Sky Accents
-     ------------------------------------------------------------------------ */
-  /* Deep Black / Charcoal Tones (for headings & high-contrast elements) */
-  --color-navy-950: #000000;      /* Pure black headings */
-  --color-navy-900: #000000;      /* Pure black */
-  --color-navy-850: #111827;      /* Sub-headings */
-  --color-navy-800: #e5e7eb;      /* Subtle borders */
-  --color-navy-700: #d1d5db;      /* Interactive borders & dividers */
+  --navy: #021d67;
+  --navy-mid: #0a2a86;
+  --navy-deep: #01113f;
+  --navy-tint: #e6eaf5;
+  --navy-faint: #f0f3fa;
 
-  /* Subtle Sky Blue & Oceanic Accents */
-  --color-sky-50:  #f0f9ff;
-  --color-sky-100: #e0f2fe;
-  --color-sky-200: #bae6fd;
-  --color-sky-300: #7dd3fc;
-  --color-sky-400: #0284c7;       /* Accent blue for buttons / highlights */
-  --color-sky-500: #0369a1;
-  --color-sky-600: #075985;       /* Deep sky anchor */
+  --ink: #15181f;
+  --charcoal: #292c34;
+  --muted: #5a6070;
+  --faint: #8a8f9c;
 
-  /* Ocean Teal Glow Accents */
-  --color-ocean-teal: #0d9488;
-  --color-ocean-cyan: #0891b2;
+  --paper: #faf9f6;
+  --paper-2: #f2f0ea;
+  --white: #ffffff;
+  --line: #ddd9d0;
+  --line-strong: #c4c0b4;
 
-  /* Typography Tones (Solid Black Text) */
-  --color-text-primary: #000000;    /* Pure black */
-  --color-text-secondary: #1f2937;  /* High contrast dark neutral */
-  --color-text-tertiary: #374151;   /* Charcoal for metadata */
-  --color-text-inverse: #ffffff;    /* White text for dark buttons */
+  --danger: #b42318;
+  --danger-bg: #fdecea;
+  --success: #1f7a4d;
+  --success-bg: #e3f3ea;
 
-  /* Backgrounds (100% Pure White Canvas - No Gradients) */
-  --bg-canvas: #ffffff;
-  --bg-surface: #ffffff;
-  --bg-surface-elevated: #ffffff;
-  --bg-input: #ffffff;
-  --bg-glass: #ffffff;
-  --bg-glass-nav: #ffffff;
-  --border-glass: #e5e7eb;
-  --border-subtle: #e5e7eb;
-  --border-hover: #111827;
+  --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-  /* ------------------------------------------------------------------------
-     2. Zero Gradients - Solid Pure Clean White Surfaces & Black Typography
-     ------------------------------------------------------------------------ */
-  --gradient-ocean-deep: #ffffff;
-  --gradient-ocean-radial: transparent;
-  --gradient-sky-accent: #0284c7;
-  --gradient-sky-text: #000000;
-  --gradient-card-border: #e5e7eb;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
 
-  /* ------------------------------------------------------------------------
-     3. Typography
-     ------------------------------------------------------------------------ */
-  --font-family-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-family-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --container: 1160px;
+  --gutter: clamp(1.25rem, 4vw, 2rem);
+  --header-h: 4.5rem;
 
-  --font-size-xs: 0.75rem;     /* 12px */
-  --font-size-sm: 0.875rem;    /* 14px */
-  --font-size-base: 1rem;      /* 16px */
-  --font-size-lg: 1.125rem;    /* 18px */
-  --font-size-xl: 1.25rem;     /* 20px */
-  --font-size-2xl: 1.5rem;     /* 24px */
-  --font-size-3xl: 1.875rem;   /* 30px */
-  --font-size-4xl: 2.25rem;    /* 36px */
-  --font-size-5xl: 3rem;       /* 48px */
-  --font-size-6xl: 3.75rem;    /* 60px */
-
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
-
-  --line-height-tight: 1.15;
-  --line-height-snug: 1.35;
-  --line-height-normal: 1.6;
-  --line-height-relaxed: 1.75;
-
-  --letter-spacing-tight: -0.025em;
-  --letter-spacing-normal: 0em;
-  --letter-spacing-wide: 0.025em;
-  --letter-spacing-wider: 0.06em;
-  --letter-spacing-widest: 0.12em;
-
-  /* ------------------------------------------------------------------------
-     4. Spacing System (Generous whitespace)
-     ------------------------------------------------------------------------ */
-  --space-1: 0.25rem;   /* 4px */
-  --space-2: 0.5rem;    /* 8px */
-  --space-3: 0.75rem;   /* 12px */
-  --space-4: 1rem;      /* 16px */
-  --space-5: 1.25rem;   /* 20px */
-  --space-6: 1.5rem;    /* 24px */
-  --space-8: 2rem;      /* 32px */
-  --space-10: 2.5rem;   /* 40px */
-  --space-12: 3rem;     /* 48px */
-  --space-16: 4rem;     /* 64px */
-  --space-20: 5rem;     /* 80px */
-  --space-24: 6rem;     /* 96px */
-  --space-32: 8rem;     /* 128px */
-
-  /* ------------------------------------------------------------------------
-     5. Layout & Containers
-     ------------------------------------------------------------------------ */
-  --container-max-width: 1240px;
-  --container-padding: var(--space-6);
-  --header-height: 5.75rem; /* ~92px */
-
-  /* ------------------------------------------------------------------------
-     6. Shadows & Ambient Oceanic Glows (Crisp & Clean for White Theme)
-     ------------------------------------------------------------------------ */
-  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.06);
-  --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
-  --shadow-lg: 0 16px 36px -4px rgba(15, 23, 42, 0.1), 0 6px 12px -2px rgba(15, 23, 42, 0.04);
-  --glow-subtle: 0 0 24px rgba(14, 165, 233, 0.08);
-  --glow-accent: 0 0 32px rgba(14, 165, 233, 0.16);
-  --glow-button: 0 4px 16px rgba(2, 132, 199, 0.25);
-
-  /* ------------------------------------------------------------------------
-     7. Radii & Transitions
-     ------------------------------------------------------------------------ */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-full: 9999px;
-
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
-
-  /* ------------------------------------------------------------------------
-     8. Responsive Breakpoints (documented reference)
-     ------------------------------------------------------------------------
-     sm: 640px
-     md: 768px
-     lg: 1024px
-     xl: 1280px
-  */
+  --radius: 6px;
+  --radius-lg: 14px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }

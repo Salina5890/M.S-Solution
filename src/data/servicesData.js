@@ -1,11 +1,11 @@
 /**
- * M.S Solutions - Official Services Data
- * Contains all service offerings with descriptions, features, and tech stacks.
+ * M.S Solutions services. Edit here and the Home, Services and Contact pages update together.
  */
 
 export const SERVICES = [
   {
     id: 'web-application-development',
+    short: 'Web applications',
     title: 'Web Application Development',
     category: 'Development',
     icon: 'Monitor',
@@ -21,6 +21,7 @@ export const SERVICES = [
   },
   {
     id: 'mobile-application-development',
+    short: 'Mobile apps',
     title: 'Mobile Application Development',
     category: 'Mobile',
     icon: 'Smartphone',
@@ -36,6 +37,7 @@ export const SERVICES = [
   },
   {
     id: 'saas-product-development',
+    short: 'SaaS products',
     title: 'SaaS Product Development',
     category: 'Products',
     icon: 'Cloud',
@@ -47,10 +49,11 @@ export const SERVICES = [
       'Multi-school management systems',
       'Scalable software solutions',
     ],
-    technologies: [],
+    technologies: ['ASP.NET Core', 'PostgreSQL', 'Docker', 'Multi-Tenancy'],
   },
   {
     id: 'school-website-development',
+    short: 'School websites',
     title: 'School Website Development',
     category: 'Education',
     icon: 'GraduationCap',
@@ -62,10 +65,11 @@ export const SERVICES = [
       'School announcements and information',
       'Responsive, mobile-friendly layouts',
     ],
-    technologies: [],
+    technologies: ['Angular', 'TypeScript', 'Responsive UI', 'REST APIs'],
   },
   {
     id: 'software-maintenance-support',
+    short: 'Maintenance & support',
     title: 'Software Maintenance & Support',
     category: 'Support',
     icon: 'Wrench',
@@ -77,6 +81,6 @@ export const SERVICES = [
       'Deployment assistance',
       'Ongoing technical support',
     ],
-    technologies: [],
+    technologies: ['Code Audits', 'Bug Fixes', 'Cloud Support', 'DevOps'],
   },
 ];

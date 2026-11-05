@@ -1,5 +1,6 @@
 # Robots.txt for M.S Solutions
 User-agent: *
 Allow: /
+Disallow: /admin
 
-Sitemap: https://salina5890.github.io/M.S-Tidalyn/sitemap.xml
+Sitemap: https://m-ssolution.web.app/sitemap.xml

@@ -1,24 +1,23 @@
 import React from 'react';
 import Button from '../../components/common/Button/Button';
-import Badge from '../../components/common/Badge/Badge';
-import { Home } from 'lucide-react';
+import usePageMeta from '../../utils/usePageMeta';
 
 export function NotFoundPage() {
+  usePageMeta('Page not found');
   return (
-    <div style={{ padding: 'var(--space-20) 0', textAlign: 'center' }}>
-      <div className="container" style={{ maxWidth: '600px' }}>
-        <Badge variant="subtle">404 Error</Badge>
-        <h1 style={{ marginTop: 'var(--space-4)', marginBottom: 'var(--space-4)' }}>
-          Navigating Uncharted Waters
-        </h1>
-        <p style={{ marginBottom: 'var(--space-8)' }}>
-          The page you are looking for does not exist or has been shifted in flight.
+    <section className="section">
+      <div className="container" style={{ maxWidth: 640 }}>
+        <span className="eyebrow">Error 404</span>
+        <h1 style={{ margin: '1rem 0 1.25rem' }}>Page not found</h1>
+        <p className="lead" style={{ marginBottom: '2rem' }}>
+          The page you are looking for does not exist or has moved. Try the home page, or get in touch and we will point you in the right direction.
         </p>
-        <Button href="/" variant="primary" size="md" iconLeft={<Home size={16} />}>
-          Return to Shore (Home)
-        </Button>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <Button href="/">Back to home</Button>
+          <Button href="/contact" variant="secondary">Contact us</Button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

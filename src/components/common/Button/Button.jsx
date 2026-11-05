@@ -3,14 +3,10 @@ import { Link } from 'react-router-dom';
 import './Button.css';
 
 /**
- * Reusable Button component for M.S Solutions
- *
- * @param {'primary' | 'secondary' | 'outline' | 'ghost'} variant - Visual style variant
- * @param {'sm' | 'md' | 'lg'} size - Button size
- * @param {string} href - If provided, renders as router Link or anchor
- * @param {React.ReactNode} iconLeft - Optional icon before label
- * @param {React.ReactNode} iconRight - Optional icon after label
- * @param {boolean} isExternal - Whether link is external
+ * Button / link button.
+ * variant: primary | secondary | light | outline-light | link
+ * size: sm | md | lg
+ * Pass `href` to render a router link (or an <a> for external / # / mailto links).
  */
 export function Button({
   children,
@@ -18,26 +14,22 @@ export function Button({
   size = 'md',
   href,
   isExternal = false,
-  iconLeft,
   iconRight,
   className = '',
-  disabled = false,
-  onClick,
   type = 'button',
   ...rest
 }) {
   const classes = `btn btn--${variant} btn--${size} ${className}`.trim();
-
   const content = (
     <>
-      {iconLeft && <span className="btn__icon btn__icon--left">{iconLeft}</span>}
-      <span className="btn__text">{children}</span>
-      {iconRight && <span className="btn__icon btn__icon--right">{iconRight}</span>}
+      <span>{children}</span>
+      {iconRight && <span className="btn__icon" aria-hidden="true">{iconRight}</span>}
     </>
   );
 
   if (href) {
-    if (isExternal || href.startsWith('#')) {
+    const plain = isExternal || href.startsWith('#') || href.startsWith('mailto:');
+    if (plain) {
       return (
         <a
           href={href}
@@ -50,24 +42,9 @@ export function Button({
         </a>
       );
     }
-    return (
-      <Link to={href} className={classes} {...rest}>
-        {content}
-      </Link>
-    );
+    return <Link to={href} className={classes} {...rest}>{content}</Link>;
   }
-
-  return (
-    <button
-      type={type}
-      className={classes}
-      disabled={disabled}
-      onClick={onClick}
-      {...rest}
-    >
-      {content}
-    </button>
-  );
+  return <button type={type} className={classes} {...rest}>{content}</button>;
 }
 
 export default Button;

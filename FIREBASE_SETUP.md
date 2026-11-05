@@ -1,4 +1,4 @@
-# M.S TIDALYN — Firebase Setup Guide
+# M.S Solutions — Firebase Setup Guide
 
 ## Files Created
 
@@ -14,7 +14,7 @@
 ## Step 1 — Create a Firebase Project
 
 1. Go to [Firebase Console](https://console.firebase.google.com/)
-2. Click **Add project** → give it a name (e.g. `mstidalyn-prod`)
+2. Click **Add project** → give it a name (e.g. `ms-solutions-prod`)
 3. Enable **Google Analytics** (optional)
 4. Click **Create project**
 
@@ -23,7 +23,7 @@
 ## Step 2 — Register a Web App
 
 1. In the Firebase project, click the **</>** (Web) icon
-2. Give it a nickname: `MS Tidalyn Web`
+2. Give it a nickname: `M.S Solutions Web`
 3. Click **Register app**
 4. Copy the `firebaseConfig` object shown
 
@@ -98,22 +98,3 @@ The contact form will now write validated inquiries to:
 **Firestore > `projectInquiries` collection**
 
 ---
-
-## What Was Added / Changed
-
-### New Files
-- `src/lib/firebase.js` — Firebase init + `submitProjectInquiry()` with validation
-- `src/utils/useScrollReveal.js` — Scroll reveal hook using IntersectionObserver
-- `firestore.rules` — Production-ready security rules
-- `.env.example` — Template for environment variables
-
-### Modified Files
-- `src/pages/Contact/ContactPage.jsx` — Connected to Firestore, added loading/error/success states, field validation, budget field, inquiry ref pill
-- `src/pages/Contact/ContactPage.css` — Added disabled, error banner, field validation, Firebase badge, ref pill styles
-- `src/pages/Home/HomePage.jsx` — Scroll reveal added
-- `src/pages/Services/ServicesPage.jsx` — Staggered card reveal
-- `src/pages/About/AboutPage.jsx` — Staggered panel reveal
-- `src/pages/Products/ProductsPage.jsx` — Scroll reveal added
-- `src/components/sections/Hero/Hero.jsx` — Added `animate-soar-4` to pillars
-- `src/styles/animations.css` — Enhanced with scroll reveal, stagger delays, spinner, reduced-motion
-- `package.json` — Added `firebase ^13.0.0`

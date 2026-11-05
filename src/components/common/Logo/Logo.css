@@ -1,17 +1,7 @@
-.brand-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-  transition: opacity 160ms ease, transform 160ms ease;
-}
-
-.brand-logo:hover {
-  opacity: 0.95;
-}
-
-.brand-logo img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
+.logo { display: inline-flex; align-items: center; gap: 0.75rem; }
+.logo__mark { width: auto; }
+.logo__text { display: flex; flex-direction: column; line-height: 1.15; }
+.logo__name { font-family: var(--font-sans); font-weight: 700; font-size: 1.05rem; letter-spacing: 0.04em; color: var(--charcoal); }
+.logo__tag { font-size: 0.72rem; color: var(--muted); margin-top: 0.2rem; }
+.logo--dark .logo__name { color: #fff; }
+.logo--dark .logo__tag { color: rgba(255, 255, 255, 0.7); }

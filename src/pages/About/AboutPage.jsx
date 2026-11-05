@@ -1,69 +1,82 @@
 import React from 'react';
-import Badge from '../../components/common/Badge/Badge';
-import Button from '../../components/common/Button/Button';
-import { ArrowRight, Sparkles, ShieldCheck, HeartHandshake, Layers } from 'lucide-react';
-import { BRAND } from '../../utils/navigation';
+import CtaBand from '../../components/sections/CtaBand';
+import eduflow from '../../assets/images/concept-eduflow.svg';
 import useScrollReveal from '../../utils/useScrollReveal';
+import usePageMeta from '../../utils/usePageMeta';
+import '../Services/ServicesPage.css';
+import './AboutPage.css';
+
+const PILLARS = [
+  ['The philosophy', 'Great software should run quietly and let an organisation focus on what matters. We build clean architectures that can grow without piling up technical debt.'],
+  ['Who we work with', 'Small schools and emerging software businesses: organisations that need strong engineering without bloated costs, bureaucratic layers or needless overhead.'],
+  ['Integrity and trust', 'We favour dependable, secure designs over fragile shortcuts. You own 100% of your source code and intellectual property.'],
+];
+
+const COMMITMENTS = [
+  ['Modern full-stack discipline', 'Strict typing with TypeScript, Angular and C# / ASP.NET Core, plus Flutter apps built for smooth 60fps performance.'],
+  ['Transparent collaboration', 'No account managers or middle layers. You work directly with experienced engineers on your specific problem.'],
+  ['Continuity after launch', 'We stand behind our code with maintenance, cloud configuration reviews and regular updates.'],
+];
 
 export function AboutPage() {
+  usePageMeta('About', 'M.S Solutions is a software company building dependable web, mobile and SaaS products for small schools and growing businesses.');
   useScrollReveal();
 
   return (
-    <div className="about-page" style={{ padding: 'var(--space-16) 0 var(--space-24)' }}>
-      <div className="container">
-        <div className="reveal-on-scroll" style={{ maxWidth: '780px', margin: '0 auto', textAlign: 'center', marginBottom: 'var(--space-12)' }}>
-
-          <h1 style={{ marginTop: 'var(--space-4)', marginBottom: 'var(--space-4)' }}>
-            Engineering with Purpose & Precision
-          </h1>
+    <>
+      <section className="page-hero">
+        <div className="container about-hero">
+          <span className="eyebrow">About M.S Solutions</span>
+          <h1>We build software that organisations can rely on.</h1>
           <p className="lead">
-            At {BRAND.name}, we are committed to powering businesses through robust, human-centered technology.
-            We architect purposeful digital platforms and resilient software engineered for long-term growth and agility.
+            M.S Solutions powers businesses through technology: dependable, human-centred software that is built
+            to grow with the people who use it.
           </p>
         </div>
+      </section>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--space-6)' }}>
-          <div className="glass-panel reveal-on-scroll reveal-delay-1" style={{ padding: 'var(--space-8)' }}>
-            <div style={{ width: 48, height: 48, borderRadius: 'var(--radius-lg)', background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', boxShadow: '0 6px 16px rgba(2, 132, 199, 0.25)', marginBottom: 'var(--space-4)' }}>
-              <Layers size={24} />
-            </div>
-            <h3 style={{ marginBottom: 'var(--space-2)' }}>The Philosophy</h3>
-            <p style={{ color: '#475569', lineHeight: 1.6 }}>
-              Great software should operate with effortless efficiency, eliminating complexity and empowering
-              organizations to focus on what matters most.
-            </p>
-          </div>
-
-          <div className="glass-panel reveal-on-scroll reveal-delay-2" style={{ padding: 'var(--space-8)' }}>
-            <div style={{ width: 48, height: 48, borderRadius: 'var(--radius-lg)', background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', boxShadow: '0 6px 16px rgba(2, 132, 199, 0.25)', marginBottom: 'var(--space-4)' }}>
-              <HeartHandshake size={24} />
-            </div>
-            <h3 style={{ marginBottom: 'var(--space-2)' }}>Our Dedication</h3>
-            <p style={{ color: '#475569', lineHeight: 1.6 }}>
-              We focus on serving small schools and emerging software businesses—organizations
-              that need high-caliber engineering without bloated costs or needless overhead.
-            </p>
-          </div>
-
-          <div className="glass-panel reveal-on-scroll reveal-delay-3" style={{ padding: 'var(--space-8)' }}>
-            <div style={{ width: 48, height: 48, borderRadius: 'var(--radius-lg)', background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', boxShadow: '0 6px 16px rgba(2, 132, 199, 0.25)', marginBottom: 'var(--space-4)' }}>
-              <ShieldCheck size={24} />
-            </div>
-            <h3 style={{ marginBottom: 'var(--space-2)' }}>Integrity & Trust</h3>
-            <p style={{ color: '#475569', lineHeight: 1.6 }}>
-              We craft every line of code with longevity in mind, avoiding fragile shortcuts
-              in favor of dependable, secure architectures.
-            </p>
-          </div>
+      <section className="section" id="philosophy" aria-label="Our philosophy">
+        <div className="container about-split">
+          <ol className="about-pillars">
+            {PILLARS.map(([t, d], i) => (
+              <li key={t} className="about-pillar reveal-on-scroll">
+                <span className="num about-pillar__num">{String(i + 1).padStart(2, '0')}</span>
+                <div>
+                  <h2>{t}</h2>
+                  <p>{d}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <figure className="figure reveal-on-scroll">
+            <img src={eduflow} width="1200" height="900" alt="Concept school portal showing a student list" loading="lazy" />
+            <figcaption>One of our school portal concepts. Illustrative data.</figcaption>
+          </figure>
         </div>
+      </section>
 
-        <div style={{ textAlign: 'center', marginTop: 'var(--space-12)' }}>
-          <Button href="/contact" variant="primary" size="md" iconRight={<ArrowRight size={16} />}>
-            Connect with Our Team
-          </Button>
+      <section className="section section--tint" id="approach" aria-labelledby="commit-title">
+        <div className="container">
+          <div className="section-head reveal-on-scroll">
+            <div>
+              <span className="eyebrow">Our commitments</span>
+              <h2 id="commit-title">What to expect from us</h2>
+            </div>
+            <p>Discipline from the first requirements conversation to production deployment.</p>
+          </div>
+          <ul className="principles">
+            {COMMITMENTS.map(([t, d], i) => (
+              <li key={t} className={`reveal-on-scroll reveal-delay-${i + 1}`}>
+                <h3>{t}</h3>
+                <p>{d}</p>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <CtaBand title="Let's talk about your project." />
+    </>
   );
 }
 

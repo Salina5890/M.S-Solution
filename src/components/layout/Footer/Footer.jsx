@@ -1,110 +1,104 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, ArrowUpRight, ShieldCheck, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, Linkedin, Instagram, Facebook, ArrowUpRight } from 'lucide-react';
 import Logo from '../../common/Logo/Logo';
-import WaveDecor from '../../../assets/icons/WaveDecor';
 import { BRAND, FOOTER_SECTIONS } from '../../../utils/navigation';
 import './Footer.css';
 
-/**
- * Reusable Corporate Footer
- * Features company brand, exact slogan, purposeful navigation pillars, and ocean accent.
- */
 export function Footer() {
   return (
     <footer className="site-footer">
-      {/* Subtle ocean wave top border */}
-      <WaveDecor opacity={0.25} className="site-footer__wave" />
-
-      <div className="container site-footer__main">
+      <div className="site-footer__top-divider" />
+      <div className="container">
         <div className="site-footer__grid">
-          <div className="site-footer__brand-col">
-            <Link to="/" className="site-footer__brand-badge" aria-label="M.S Solutions Home">
-              <Logo size={44} />
+          {/* Brand & Mission */}
+          <div className="site-footer__brand">
+            <Link to="/" aria-label="M.S Solutions, home">
+              <Logo theme="dark" size={46} />
             </Link>
+            <p className="site-footer__desc">{BRAND.description}</p>
 
-            <p className="site-footer__desc">
-              {BRAND.description}
-            </p>
-
-            {/* Direct Connected Channels */}
-            <div className="site-footer__social-row">
-              <a
-                href={`mailto:${BRAND.email}`}
-                className="site-footer__social-circle"
-                aria-label={`Email us at ${BRAND.email}`}
-                title={`Email: ${BRAND.email}`}
-              >
-                <Mail size={17} />
+            {/* Direct Contact Links */}
+            <div className="site-footer__direct-contact">
+              <a href={`mailto:${BRAND.email}`} className="site-footer__contact-item">
+                <span className="contact-icon contact-icon--mail">
+                  <Mail size={16} />
+                </span>
+                <span>{BRAND.email}</span>
               </a>
-              <a
-                href={BRAND.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="site-footer__social-circle"
-                aria-label="Connect on LinkedIn"
-                title="LinkedIn Company Page"
-              >
-                <Linkedin size={17} />
-              </a>
-              <a
-                href={BRAND.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="site-footer__social-circle"
-                aria-label="Follow us on Instagram"
-                title="Instagram Profile"
-              >
-                <Instagram size={17} />
+              <a href={BRAND.phoneHref} className="site-footer__contact-item">
+                <span className="contact-icon contact-icon--phone">
+                  <Phone size={16} />
+                </span>
+                <span>{BRAND.phone}</span>
               </a>
             </div>
 
-            <div className="site-footer__trust-tag">
-              <ShieldCheck size={15} className="site-footer__trust-icon" />
-              <span>Reliable Engineering &bull; Modern Cloud Systems</span>
-            </div>
-          </div>
+            {/* Social Channels with Authentic Brand Colors */}
+            <div className="site-footer__social-section">
+              <span className="site-footer__social-title">Connect with us</span>
+              <div className="site-footer__social-links">
+                <a
+                  href={BRAND.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-btn social-btn--linkedin"
+                  aria-label="LinkedIn"
+                  title="M.S Solutions on LinkedIn"
+                >
+                  <Linkedin size={18} />
+                  <span>LinkedIn</span>
+                  <ArrowUpRight size={12} className="social-btn__arrow" />
+                </a>
 
-          {/* 3 Balanced Navigation Columns */}
-          <div className="site-footer__nav-cols">
-            {FOOTER_SECTIONS.map((section) => (
-              <div key={section.title} className="site-footer__col">
-                <h4 className="site-footer__col-title">{section.title}</h4>
-                <ul className="site-footer__links">
-                  {section.links.map((link) => (
-                    <li key={link.label}>
-                      {link.href.startsWith('#') || link.href.startsWith('mailto:') ? (
-                        <a href={link.href} className="site-footer__link">
-                          {link.label}
-                        </a>
-                      ) : (
-                        <Link to={link.href} className="site-footer__link">
-                          {link.label}
-                        </Link>
-                      )}
-                    </li>
-                  ))}
-                </ul>
+                <a
+                  href={BRAND.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-btn social-btn--instagram"
+                  aria-label="Instagram"
+                  title="M.S Solutions on Instagram"
+                >
+                  <Instagram size={18} />
+                  <span>Instagram</span>
+                  <ArrowUpRight size={12} className="social-btn__arrow" />
+                </a>
+
+                <a
+                  href={BRAND.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-btn social-btn--facebook"
+                  aria-label="Facebook"
+                  title="M.S Solutions on Facebook"
+                >
+                  <Facebook size={18} />
+                  <span>Facebook</span>
+                  <ArrowUpRight size={12} className="social-btn__arrow" />
+                </a>
               </div>
-            ))}
+            </div>
           </div>
+
+          {/* Navigation Links Columns */}
+          {FOOTER_SECTIONS.map((s) => (
+            <nav key={s.title} className="site-footer__nav" aria-label={s.title}>
+              <h4>{s.title}</h4>
+              <ul>
+                {s.links.map((l) => (
+                  <li key={l.label}>
+                    <Link to={l.href}>{l.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
         </div>
 
-        {/* Bottom Company Recognition Bar */}
+        {/* Footer Bottom Bar */}
         <div className="site-footer__bottom">
-          <p className="site-footer__copyright">
-            &copy; {new Date().getFullYear()} <strong>M.S Solutions</strong>. All rights reserved.
-          </p>
-          <p className="site-footer__slogan">
-            &ldquo;{BRAND.slogan}&rdquo;
-          </p>
-          <div className="site-footer__bottom-links">
-            <Link to="/about" className="site-footer__bottom-link">About</Link>
-            <span className="dot-divider">&bull;</span>
-            <Link to="/services" className="site-footer__bottom-link">Services</Link>
-            <span className="dot-divider">&bull;</span>
-            <Link to="/contact" className="site-footer__bottom-link">Contact</Link>
-          </div>
+          <p>&copy; {new Date().getFullYear()} M.S Solutions. All rights reserved.</p>
+          <p className="site-footer__slogan">{BRAND.slogan}</p>
         </div>
       </div>
     </footer>

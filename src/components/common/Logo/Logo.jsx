@@ -1,45 +1,26 @@
 import React from 'react';
-import logoImage from '../../../../assets/M.S Solutions logo.png';
+import markDark from '../../../assets/brand/mark.png';
+import markWhite from '../../../assets/brand/mark-white.png';
 import './Logo.css';
 
 /**
- * M.S SOLUTIONS Official Brand Logo Component
- * Renders the official brand logo from the assets folder.
+ * Official M.S Solutions mark with a live-text wordmark.
+ * theme: 'light' (for light backgrounds) | 'dark' (for navy backgrounds)
  */
-export function Logo({
-  variant = 'full', // 'icon' | 'full' | 'badge'
-  size = 76,
-  width,
-  height,
-  className = '',
-  alt = 'M.S Solutions | Powering Businesses Through Technology',
-}) {
-  const finalHeight = height || size || 74;
-  const finalWidth = width || (height ? 'auto' : `${finalHeight}px`);
-
+export function Logo({ theme = 'light', size = 44, tagline = false }) {
   return (
-    <div
-      className={`brand-logo brand-logo--${variant} ${className}`}
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textDecoration: 'none',
-        flexShrink: 0,
-      }}
-    >
+    <span className={`logo logo--${theme}`}>
       <img
-        src={logoImage}
-        alt={alt}
-        style={{
-          height: typeof finalHeight === 'number' ? `${finalHeight}px` : finalHeight,
-          width: typeof finalWidth === 'number' ? `${finalWidth}px` : finalWidth,
-          maxWidth: '100%',
-          objectFit: 'contain',
-          display: 'block',
-        }}
+        className="logo__mark"
+        src={theme === 'dark' ? markWhite : markDark}
+        alt=""
+        style={{ height: size }}
       />
-    </div>
+      <span className="logo__text">
+        <span className="logo__name">M.S SOLUTIONS</span>
+        {tagline && <span className="logo__tag">Powering Businesses Through Technology.</span>}
+      </span>
+    </span>
   );
 }
 
