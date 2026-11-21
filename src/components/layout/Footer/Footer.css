@@ -34,6 +34,27 @@
   flex-direction: column;
 }
 
+.site-footer__logo-wrap {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  text-decoration: none;
+}
+
+.site-footer__logo {
+  width: 95px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.15);
+  display: block;
+  transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.25s ease;
+}
+
+.site-footer__logo:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.28);
+}
+
 .site-footer__desc {
   color: rgba(255, 255, 255, 0.72);
   margin: 1.25rem 0 1.5rem;

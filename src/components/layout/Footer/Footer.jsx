@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Linkedin, Instagram, Facebook, ArrowUpRight } from 'lucide-react';
-import Logo from '../../common/Logo/Logo';
+import logoOfficial from '../../../assets/brand/logo-official.jpg';
 import { BRAND, FOOTER_SECTIONS } from '../../../utils/navigation';
 import './Footer.css';
 
@@ -13,8 +13,14 @@ export function Footer() {
         <div className="site-footer__grid">
           {/* Brand & Mission */}
           <div className="site-footer__brand">
-            <Link to="/" aria-label="M.S Solutions, home">
-              <Logo theme="dark" size={46} />
+            <Link to="/" className="site-footer__logo-wrap" aria-label="M.S Solutions, home" title="M.S Solutions Home">
+              <img
+                src={logoOfficial}
+                alt="M.S Solutions — Powering Businesses Through Technology"
+                className="site-footer__logo"
+                width="95"
+                height="95"
+              />
             </Link>
             <p className="site-footer__desc">{BRAND.description}</p>
 
