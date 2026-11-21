@@ -1,9 +1,63 @@
-.about-hero h1 { margin: 1rem 0 1.4rem; max-width: 18ch; }
-.about-hero .lead { max-width: 56ch; }
+.about-hero h1 { margin: 1rem 0 1.4rem; max-width: 22ch; font-size: clamp(2.3rem, 3.6vw, 3.4rem); }
+.about-hero .lead { max-width: 58ch; }
+
+/* Stats Band */
+.about-stats-section {
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.about-stat-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+}
+
+.about-stat-card__val {
+  font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.about-stat-card__label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+
+.about-stat-card__sub {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
 .about-split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
-.about-pillar { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 2rem 0; border-top: 1px solid var(--line-strong); }
+.about-pillar { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 2.2rem 0; border-top: 1px solid var(--line-strong); }
 .about-pillar:last-child { border-bottom: 1px solid var(--line-strong); }
-.about-pillar h2 { font-size: clamp(1.5rem, 1.2vw + 1rem, 1.9rem); margin-bottom: 0.6rem; }
+.about-pillar h2 { font-size: clamp(1.35rem, 1.2vw + 1rem, 1.75rem); margin-bottom: 0.6rem; color: var(--ink); }
 .about-pillar__num { font-size: 1.5rem; color: var(--navy); line-height: 1.2; }
 .about-split .figure { position: sticky; top: calc(var(--header-h) + 1.5rem); }
-@media (max-width: 900px) { .about-split { grid-template-columns: 1fr; } .about-split .figure { position: static; } }
+
+@media (max-width: 900px) {
+  .about-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-split { grid-template-columns: 1fr; }
+  .about-split .figure { position: static; }
+}
+
+@media (max-width: 480px) {
+  .about-stats-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%" fill="none">
+  <!-- Background -->
+  <rect width="1200" height="900" rx="24" fill="#0A0F1D"/>
+  <rect x="2" y="2" width="1196" height="896" rx="22" stroke="#1E293B" stroke-width="2"/>
+  
+  <!-- Glowing Highlights -->
+  <circle cx="200" cy="200" r="280" fill="#10B981" opacity="0.09" filter="blur(70px)"/>
+  <circle cx="1000" cy="500" r="320" fill="#6366F1" opacity="0.12" filter="blur(80px)"/>
+
+  <!-- Storefront Header -->
+  <rect x="60" y="50" width="1080" height="80" rx="14" fill="#111C35"/>
+  <text x="100" y="100" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#FFFFFF">ShopSphere</text>
+  <text x="270" y="98" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">Men &middot; Women &middot; Equipment &middot; Accessories</text>
+  
+  <!-- Search Bar -->
+  <rect x="660" y="70" width="280" height="40" rx="20" fill="#0B132B"/>
+  <text x="690" y="95" font-family="system-ui, sans-serif" font-size="13" fill="#64748B">Instant search (240ms)...</text>
+  
+  <!-- Cart Pill -->
+  <rect x="960" y="70" width="150" height="40" rx="20" fill="#2563EB"/>
+  <text x="985" y="95" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Cart (3) &middot; $284</text>
+
+  <!-- Category & Filter Strip -->
+  <g transform="translate(60, 150)">
+    <rect width="1080" height="50" fill="#0E1628"/>
+    <text x="40" y="32" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#10B981">ALL PRODUCTS (148)</text>
+    <text x="220" y="32" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">RUNNING SHOES</text>
+    <text x="380" y="32" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">OUTDOOR GEAR</text>
+    <text x="540" y="32" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">TECH ACCESSORIES</text>
+    
+    <text x="920" y="32" font-family="system-ui, sans-serif" font-size="13" fill="#38BDF8">Sort: Featured &darr;</text>
+  </g>
+
+  <!-- Left: Product Grid (3 cards) -->
+  <g transform="translate(60, 220)">
+    <!-- Product 1 -->
+    <rect x="0" y="0" width="225" height="340" rx="12" fill="#151E36" stroke="#1E293B" stroke-width="1"/>
+    <rect x="15" y="15" width="195" height="180" rx="8" fill="#1E293B"/>
+    <circle cx="112" cy="105" r="50" fill="#334155" opacity="0.6"/>
+    <text x="85" y="112" font-family="system-ui, sans-serif" font-size="28" fill="#94A3B8">👟</text>
+    <rect x="25" y="25" width="60" height="22" rx="4" fill="#10B981"/>
+    <text x="32" y="40" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">NEW</text>
+    <text x="15" y="225" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">AeroPulse Pro Runner</text>
+    <text x="15" y="248" font-family="system-ui, sans-serif" font-size="13" fill="#64748B">Ultra-responsive foam</text>
+    <text x="15" y="280" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#38BDF8">$140.00</text>
+    <rect x="15" y="295" width="195" height="34" rx="6" fill="#1E293B"/>
+    <text x="75" y="317" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Add to Cart</text>
+
+    <!-- Product 2 -->
+    <g transform="translate(245, 0)">
+      <rect x="0" y="0" width="225" height="340" rx="12" fill="#151E36" stroke="#1E293B" stroke-width="1"/>
+      <rect x="15" y="15" width="195" height="180" rx="8" fill="#1E293B"/>
+      <circle cx="112" cy="105" r="50" fill="#334155" opacity="0.6"/>
+      <text x="85" y="112" font-family="system-ui, sans-serif" font-size="28" fill="#94A3B8">🎒</text>
+      <text x="15" y="225" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Nordic Trail Pack 24L</text>
+      <text x="15" y="248" font-family="system-ui, sans-serif" font-size="13" fill="#64748B">Weatherproof ripstop</text>
+      <text x="15" y="280" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#38BDF8">$89.00</text>
+      <rect x="15" y="295" width="195" height="34" rx="6" fill="#1E293B"/>
+      <text x="75" y="317" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Add to Cart</text>
+    </g>
+
+    <!-- Product 3 -->
+    <g transform="translate(490, 0)">
+      <rect x="0" y="0" width="225" height="340" rx="12" fill="#151E36" stroke="#1E293B" stroke-width="1"/>
+      <rect x="15" y="15" width="195" height="180" rx="8" fill="#1E293B"/>
+      <circle cx="112" cy="105" r="50" fill="#334155" opacity="0.6"/>
+      <text x="85" y="112" font-family="system-ui, sans-serif" font-size="28" fill="#94A3B8">⌚</text>
+      <text x="15" y="225" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Apex Chrono Watch</text>
+      <text x="15" y="248" font-family="system-ui, sans-serif" font-size="13" fill="#64748B">Sapphire titanium</text>
+      <text x="15" y="280" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#38BDF8">$210.00</text>
+      <rect x="15" y="295" width="195" height="34" rx="6" fill="#1E293B"/>
+      <text x="75" y="317" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Add to Cart</text>
+    </g>
+  </g>
+
+  <!-- Right: Slide-out Fast Checkout Drawer -->
+  <g transform="translate(800, 220)">
+    <rect width="340" height="570" rx="14" fill="#111A2E" stroke="#2563EB" stroke-width="2"/>
+    <text x="30" y="45" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Your Shopping Cart</text>
+    <rect x="250" y="25" width="60" height="26" rx="6" fill="#10B981" opacity="0.2"/>
+    <text x="258" y="42" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#10B981">FREE SHIP</text>
+
+    <!-- Shipping progress -->
+    <rect x="30" y="65" width="280" height="8" rx="4" fill="#1E293B"/>
+    <rect x="30" y="65" width="280" height="8" rx="4" fill="#10B981"/>
+    <text x="30" y="90" font-family="system-ui, sans-serif" font-size="12" fill="#94A3B8">&check; You unlocked Free Express Global Shipping!</text>
+
+    <!-- Cart item 1 -->
+    <g transform="translate(30, 115)">
+      <rect width="280" height="70" rx="8" fill="#15213D"/>
+      <text x="15" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">AeroPulse Pro (Size 10)</text>
+      <text x="15" y="52" font-family="system-ui, sans-serif" font-size="13" fill="#64748B">Qty: 1 &middot; Color: Obsidian</text>
+      <text x="210" y="42" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#38BDF8">$140</text>
+    </g>
+
+    <!-- Cart item 2 -->
+    <g transform="translate(30, 200)">
+      <rect width="280" height="70" rx="8" fill="#15213D"/>
+      <text x="15" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Apex Chrono Watch</text>
+      <text x="15" y="52" font-family="system-ui, sans-serif" font-size="13" fill="#64748B">Qty: 1 &middot; Strap: Leather</text>
+      <text x="210" y="42" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#38BDF8">$210</text>
+    </g>
+
+    <!-- Totals -->
+    <g transform="translate(30, 300)">
+      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="14" fill="#94A3B8">Subtotal</text>
+      <text x="230" y="20" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">$350.00</text>
+      
+      <text x="0" y="50" font-family="system-ui, sans-serif" font-size="14" fill="#94A3B8">VIP Discount (code: MS20)</text>
+      <text x="230" y="50" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#10B981">-$66.00</text>
+
+      <line x1="0" y1="70" x2="280" y2="70" stroke="#1E293B" stroke-width="1"/>
+
+      <text x="0" y="100" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Total</text>
+      <text x="215" y="100" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#38BDF8">$284.00</text>
+    </g>
+
+    <!-- 1-Click Pay -->
+    <rect x="30" y="430" width="280" height="46" rx="8" fill="#10B981"/>
+    <text x="80" y="458" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Instant Checkout &rarr;</text>
+    <text x="45" y="500" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">Guaranteed Safe Checkout with Stripe &amp; Apple Pay</text>
+  </g>
+
+  <!-- Performance Meter on bottom left -->
+  <g transform="translate(60, 590)">
+    <rect width="715" height="200" rx="14" fill="#111A2E" stroke="#1E293B" stroke-width="1"/>
+    <text x="35" y="45" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">ShopSphere Core Architecture Performance</text>
+    
+    <g transform="translate(35, 75)">
+      <rect width="140" height="90" rx="8" fill="#15213D"/>
+      <text x="20" y="35" font-family="system-ui, sans-serif" font-size="12" fill="#94A3B8">P99 Latency</text>
+      <text x="20" y="70" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#10B981">240ms</text>
+    </g>
+
+    <g transform="translate(195, 75)">
+      <rect width="140" height="90" rx="8" fill="#15213D"/>
+      <text x="20" y="35" font-family="system-ui, sans-serif" font-size="12" fill="#94A3B8">Google Lighthouse</text>
+      <text x="20" y="70" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#10B981">99/100</text>
+    </g>
+
+    <g transform="translate(355, 75)">
+      <rect width="160" height="90" rx="8" fill="#15213D"/>
+      <text x="20" y="35" font-family="system-ui, sans-serif" font-size="12" fill="#94A3B8">Cart Abandonment</text>
+      <text x="20" y="70" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#38BDF8">-32% Drop</text>
+    </g>
+
+    <g transform="translate(535, 75)">
+      <rect width="150" height="90" rx="8" fill="#15213D"/>
+      <text x="20" y="35" font-family="system-ui, sans-serif" font-size="12" fill="#94A3B8">Headless Stack</text>
+      <text x="20" y="70" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Next.js + Stripe</text>
+    </g>
+  </g>
+
+  <!-- Concept Stamp Footer -->
+  <rect x="60" y="810" width="1080" height="50" rx="8" fill="#111827"/>
+  <text x="85" y="842" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#F59E0B">CONCEPT DEMONSTRATION</text>
+  <text x="280" y="842" font-family="system-ui, sans-serif" font-size="13" fill="#94A3B8">M.S Solutions Headless E-commerce Prototype &middot; Designed for High Conversion D2C Brands</text>
+</svg>

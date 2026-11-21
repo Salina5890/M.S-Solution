@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%" fill="none">
+  <!-- Background -->
+  <rect width="1200" height="900" rx="24" fill="#0A0E1A"/>
+  <rect x="2" y="2" width="1196" height="896" rx="22" stroke="#1E293B" stroke-width="2"/>
+  
+  <!-- Glowing Highlights -->
+  <circle cx="1000" cy="200" r="300" fill="#3B82F6" opacity="0.12" filter="blur(80px)"/>
+  <circle cx="200" cy="700" r="280" fill="#8B5CF6" opacity="0.1" filter="blur(70px)"/>
+
+  <!-- App Header & Navigation Bar -->
+  <rect x="60" y="50" width="1080" height="70" rx="14" fill="#111A2E"/>
+  <text x="95" y="93" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">BusinessPilot</text>
+  <rect x="250" y="70" width="120" height="30" rx="6" fill="#1E293B"/>
+  <text x="265" y="90" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Enterprise Plan</text>
+
+  <text x="420" y="92" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Dashboard</text>
+  <text x="520" y="92" font-family="system-ui, sans-serif" font-size="14" fill="#94A3B8">Analytics</text>
+  <text x="610" y="92" font-family="system-ui, sans-serif" font-size="14" fill="#94A3B8">Customers</text>
+  <text x="710" y="92" font-family="system-ui, sans-serif" font-size="14" fill="#94A3B8">Billing</text>
+
+  <!-- Live Date & Export Button -->
+  <text x="860" y="92" font-family="system-ui, sans-serif" font-size="13" fill="#64748B">Nov 21, 2026</text>
+  <rect x="970" y="66" width="140" height="38" rx="8" fill="#2563EB"/>
+  <text x="990" y="90" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">&darr; Export Report</text>
+
+  <!-- KPI Cards (4 metrics) -->
+  <g transform="translate(60, 145)">
+    <!-- KPI 1: MRR -->
+    <rect width="250" height="120" rx="12" fill="#15213D" stroke="#1E293B" stroke-width="1"/>
+    <text x="25" y="38" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">MONTHLY RECURRING REVENUE</text>
+    <text x="25" y="78" font-family="system-ui, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">$84,320</text>
+    <text x="25" y="103" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#10B981">&uarr; +18.4% vs last month</text>
+
+    <!-- KPI 2: Active Accounts -->
+    <g transform="translate(275, 0)">
+      <rect width="250" height="120" rx="12" fill="#15213D" stroke="#1E293B" stroke-width="1"/>
+      <text x="25" y="38" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">ACTIVE SUBSCRIBERS</text>
+      <text x="25" y="78" font-family="system-ui, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">1,429</text>
+      <text x="25" y="103" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#10B981">&uarr; +124 net new</text>
+    </g>
+
+    <!-- KPI 3: Churn Rate -->
+    <g transform="translate(550, 0)">
+      <rect width="250" height="120" rx="12" fill="#15213D" stroke="#1E293B" stroke-width="1"/>
+      <text x="25" y="38" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">MONTHLY LOG CHURN</text>
+      <text x="25" y="78" font-family="system-ui, sans-serif" font-size="30" font-weight="800" fill="#38BDF8">0.78%</text>
+      <text x="25" y="103" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#10B981">&darr; Industry top quartile</text>
+    </g>
+
+    <!-- KPI 4: Net Retention -->
+    <g transform="translate(825, 0)">
+      <rect width="255" height="120" rx="12" fill="#15213D" stroke="#1E293B" stroke-width="1"/>
+      <text x="25" y="38" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">NET REVENUE RETENTION (NRR)</text>
+      <text x="25" y="78" font-family="system-ui, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">126.4%</text>
+      <text x="25" y="103" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#8B5CF6">Expansion tier active</text>
+    </g>
+  </g>
+
+  <!-- Middle Row: Interactive Growth Chart + Live Activity Feed -->
+  <g transform="translate(60, 290)">
+    <!-- Revenue Chart Card -->
+    <rect width="700" height="350" rx="14" fill="#111A2E" stroke="#1E293B" stroke-width="1"/>
+    <text x="30" y="45" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Revenue &amp; Tenant Trajectory (TTM)</text>
+    <text x="30" y="70" font-family="system-ui, sans-serif" font-size="13" fill="#64748B">Continuous cloud telemetry aggregation from multi-tenant nodes</text>
+
+    <!-- Chart Grid Lines -->
+    <line x1="30" y1="110" x2="660" y2="110" stroke="#1E293B" stroke-width="1" stroke-dasharray="4 4"/>
+    <line x1="30" y1="165" x2="660" y2="165" stroke="#1E293B" stroke-width="1" stroke-dasharray="4 4"/>
+    <line x1="30" y1="220" x2="660" y2="220" stroke="#1E293B" stroke-width="1" stroke-dasharray="4 4"/>
+    <line x1="30" y1="275" x2="660" y2="275" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Chart Curves -->
+    <path d="M 40 260 Q 150 240, 240 210 T 400 170 T 540 120 T 660 85" fill="none" stroke="#38BDF8" stroke-width="4"/>
+    <path d="M 40 260 Q 150 240, 240 210 T 400 170 T 540 120 T 660 85 L 660 275 L 40 275 Z" fill="url(#chartGrad)" opacity="0.25"/>
+
+    <!-- Data Callout Marker -->
+    <circle cx="660" cy="85" r="7" fill="#38BDF8"/>
+    <circle cx="660" cy="85" r="14" stroke="#38BDF8" stroke-width="2" opacity="0.5"/>
+    <rect x="560" y="35" width="90" height="34" rx="6" fill="#1E293B"/>
+    <text x="575" y="57" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#38BDF8">$84.3k</text>
+
+    <!-- Month Axis -->
+    <text x="40" y="310" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">Jan</text>
+    <text x="140" y="310" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">Mar</text>
+    <text x="240" y="310" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">May</text>
+    <text x="340" y="310" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">Jul</text>
+    <text x="440" y="310" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">Sep</text>
+    <text x="540" y="310" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">Oct</text>
+    <text x="640" y="310" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Nov</text>
+
+    <!-- Right Side: Recent Transactions & Alerts -->
+    <g transform="translate(730, 0)">
+      <rect width="350" height="350" rx="14" fill="#111A2E" stroke="#1E293B" stroke-width="1"/>
+      <text x="25" y="45" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">Real-Time Event Stream</text>
+
+      <!-- Event 1 -->
+      <g transform="translate(25, 75)">
+        <circle cx="16" cy="18" r="12" fill="#10B981" opacity="0.2"/>
+        <text x="12" y="22" font-family="system-ui, sans-serif" font-size="12" fill="#10B981">&check;</text>
+        <text x="40" y="16" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">New Enterprise Client Signed</text>
+        <text x="40" y="34" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">OmniLogix Inc. &middot; $1,490/mo</text>
+        <text x="260" y="24" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">3m ago</text>
+      </g>
+
+      <!-- Event 2 -->
+      <g transform="translate(25, 145)">
+        <circle cx="16" cy="18" r="12" fill="#38BDF8" opacity="0.2"/>
+        <text x="11" y="22" font-family="system-ui, sans-serif" font-size="12" fill="#38BDF8">&uarr;</text>
+        <text x="40" y="16" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Tier Upgrade Completed</text>
+        <text x="40" y="34" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">HyperPulse Ltd &middot; Pro &rarr; Enterprise</text>
+        <text x="255" y="24" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">18m ago</text>
+      </g>
+
+      <!-- Event 3 -->
+      <g transform="translate(25, 215)">
+        <circle cx="16" cy="18" r="12" fill="#8B5CF6" opacity="0.2"/>
+        <text x="12" y="22" font-family="system-ui, sans-serif" font-size="12" fill="#8B5CF6">&star;</text>
+        <text x="40" y="16" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Automated Invoicing Dispatched</text>
+        <text x="40" y="34" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">412 subscriptions reconciled via Stripe</text>
+        <text x="260" y="24" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">1h ago</text>
+      </g>
+
+      <!-- Event 4 -->
+      <g transform="translate(25, 285)">
+        <circle cx="16" cy="18" r="12" fill="#10B981" opacity="0.2"/>
+        <text x="12" y="22" font-family="system-ui, sans-serif" font-size="12" fill="#10B981">&check;</text>
+        <text x="40" y="16" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">System Health 100%</text>
+        <text x="40" y="34" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">PostgreSQL nodes latency: 14ms</text>
+        <text x="255" y="24" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">2h ago</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Gradient def -->
+  <defs>
+    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Bottom Architecture Metrics Bar -->
+  <g transform="translate(60, 660)">
+    <rect width="1080" height="130" rx="14" fill="#111A2E" stroke="#1E293B" stroke-width="1"/>
+    
+    <g transform="translate(40, 25)">
+      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#38BDF8">MULTI-TENANT ISOLATION</text>
+      <text x="0" y="48" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Row-Level Security &amp; Tenant Schemas</text>
+      <text x="0" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#64748B">Zero cross-tenant data contamination guaranteed.</text>
+    </g>
+
+    <line x1="420" y1="20" x2="420" y2="110" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(450, 25)">
+      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#10B981">INTEGRATED BILLING ENGINE</text>
+      <text x="0" y="48" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Stripe API &amp; Usage Metering</text>
+      <text x="0" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#64748B">Tier upgrades, seat licensing, and proration logic built-in.</text>
+    </g>
+
+    <line x1="840" y1="20" x2="840" y2="110" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(870, 25)">
+      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#8B5CF6">ENTERPRISE AUDIT TRAIL</text>
+      <text x="0" y="48" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Granular Action Logs</text>
+      <text x="0" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#64748B">SOC2-ready event streaming and immutable records.</text>
+    </g>
+  </g>
+
+  <!-- Concept Stamp Footer -->
+  <rect x="60" y="810" width="1080" height="50" rx="8" fill="#111827"/>
+  <text x="85" y="842" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#F59E0B">CONCEPT DEMONSTRATION</text>
+  <text x="280" y="842" font-family="system-ui, sans-serif" font-size="13" fill="#94A3B8">M.S Solutions SaaS Analytics &amp; Operations Architecture Blueprint &middot; Illustrative Prototype</text>
+</svg>

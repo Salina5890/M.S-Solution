@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { Mail, Phone, Facebook, Instagram, Linkedin, AlertCircle, CheckCircle2, Loader2 } from 'lucide-react';
+import { Mail, Phone, Facebook, Instagram, Linkedin, Globe, AlertCircle, CheckCircle2, Loader2 } from 'lucide-react';
 import logoWhite from '../../assets/brand/logo-full-white.png';
 import { BRAND } from '../../utils/navigation';
 import { SERVICES } from '../../data/servicesData';
@@ -11,7 +11,10 @@ const TOPICS = ['General inquiry', ...SERVICES.map((s) => s.title), 'Technical c
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function ContactPage() {
-  usePageMeta('Contact', 'Contact M.S Solutions about a web application, mobile app, SaaS product or school website.');
+  usePageMeta(
+    'Contact & Project Inquiries',
+    'Discuss your web development, e-commerce, mobile app, SaaS, or UI/UX project with senior engineers at M.S Solutions.'
+  );
   const [params] = useSearchParams();
   const matched = SERVICES.find((s) => s.id === params.get('service'));
 
@@ -97,12 +100,13 @@ export function ContactPage() {
           <img className="contact__logo" src={logoWhite} alt="M.S Solutions" width="200" />
           <h1>Let&rsquo;s talk about your project.</h1>
           <p>
-            Tell us what you need. Whether it is a school website, a mobile app or a SaaS product, we will
-            reply by email.
+            Tell us about your digital goals. Whether it is an e-commerce platform, a custom web application,
+            a cross-platform mobile app, or a scalable SaaS product, our lead engineers will review your requirements
+            and respond directly.
           </p>
           <ul className="contact__links">
             <li>
-              <a href={`mailto:${BRAND.email}`}>
+              <a href={`mailto:${BRAND.email}`} title="Email M.S Solutions">
                 <span className="contact__icon-badge contact__icon-badge--mail">
                   <Mail size={18} aria-hidden="true" />
                 </span>
@@ -110,7 +114,15 @@ export function ContactPage() {
               </a>
             </li>
             <li>
-              <a href={BRAND.phoneHref}>
+              <a href={BRAND.website} target="_blank" rel="noopener noreferrer" title="Official Website">
+                <span className="contact__icon-badge contact__icon-badge--mail">
+                  <Globe size={18} aria-hidden="true" />
+                </span>
+                <span>m-ssolution.web.app</span>
+              </a>
+            </li>
+            <li>
+              <a href={BRAND.phoneHref} title="Call M.S Solutions">
                 <span className="contact__icon-badge contact__icon-badge--phone">
                   <Phone size={18} aria-hidden="true" />
                 </span>

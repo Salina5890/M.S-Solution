@@ -5,6 +5,7 @@ import ScrollToTop from './components/common/ScrollToTop';
 import HomePage from './pages/Home/HomePage';
 import AboutPage from './pages/About/AboutPage';
 import ServicesPage from './pages/Services/ServicesPage';
+import PortfolioPage from './pages/Portfolio/PortfolioPage';
 import ContactPage from './pages/Contact/ContactPage';
 import LegalPage from './pages/Legal/LegalPage';
 import NotFoundPage from './pages/NotFound/NotFoundPage';
@@ -24,6 +25,7 @@ export function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/admin" element={<AdminPage />} />
@@ -31,7 +33,7 @@ export function App() {
             <Route path="/terms" element={<LegalPage doc={TERMS} />} />
             {/* Old URLs from earlier versions of the site */}
             <Route path="/solutions" element={<Navigate to="/services" replace />} />
-            <Route path="/products" element={<Navigate to="/services" replace />} />
+            <Route path="/products" element={<Navigate to="/portfolio" replace />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>

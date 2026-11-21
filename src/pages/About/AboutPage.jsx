@@ -1,41 +1,97 @@
 import React from 'react';
+import { ArrowRight, Sparkles, ShieldCheck, Cpu, Code2, Users2, Zap } from 'lucide-react';
+import Button from '../../components/common/Button/Button';
 import CtaBand from '../../components/sections/CtaBand';
-import eduflow from '../../assets/images/concept-eduflow.svg';
+import shopsphereImg from '../../assets/images/concept-shopsphere.svg';
+import businesspilotImg from '../../assets/images/concept-businesspilot.svg';
 import useScrollReveal from '../../utils/useScrollReveal';
 import usePageMeta from '../../utils/usePageMeta';
 import '../Services/ServicesPage.css';
 import './AboutPage.css';
 
 const PILLARS = [
-  ['The philosophy', 'Great software should run quietly and let an organisation focus on what matters. We build clean architectures that can grow without piling up technical debt.'],
-  ['Who we work with', 'Small schools and emerging software businesses: organisations that need strong engineering without bloated costs, bureaucratic layers or needless overhead.'],
-  ['Integrity and trust', 'We favour dependable, secure designs over fragile shortcuts. You own 100% of your source code and intellectual property.'],
+  [
+    'Practical Engineering Philosophy',
+    'Great digital products should run quietly, load instantly, and drive measurable revenue. We favor clean, modular architectures that scale gracefully without piling up technical debt or vendor lock-in.',
+  ],
+  [
+    'Who We Partner With',
+    'Ambitious small businesses, fast-scaling e-commerce retailers, and early-stage startups internationally. Organisations that demand senior engineering firepower without bureaucratic agency layers or bloated overhead.',
+  ],
+  [
+    'Integrity & 100% Client Ownership',
+    'We build with radical transparency. You retain complete, unencumbered ownership of all source code, Figma design files, and cloud infrastructure credentials. No proprietary traps or hostage codebases.',
+  ],
 ];
 
 const COMMITMENTS = [
-  ['Modern full-stack discipline', 'Strict typing with TypeScript, Angular and C# / ASP.NET Core, plus Flutter apps built for smooth 60fps performance.'],
-  ['Transparent collaboration', 'No account managers or middle layers. You work directly with experienced engineers on your specific problem.'],
-  ['Continuity after launch', 'We stand behind our code with maintenance, cloud configuration reviews and regular updates.'],
+  [
+    'Senior Full-Stack Discipline',
+    'Strict typing with TypeScript, component systems in React and Next.js, resilient backends in ASP.NET Core and Node, and 60fps mobile applications engineered in Flutter.',
+  ],
+  [
+    'Direct Developer Communication',
+    'No account coordinators or non-technical intermediaries. You collaborate directly with the software engineers writing and deploying your system.',
+  ],
+  [
+    'Commercial & Conversion Focus',
+    'We engineer software to generate commercial returns: eliminating cart abandonment, streamlining customer onboarding, and automating high-friction manual operations.',
+  ],
+  [
+    'Proactive Post-Launch Support',
+    'We stand behind every release with rigorous warranty periods, performance profiling, continuous security updates, and flexible growth roadmap sprints.',
+  ],
+];
+
+const STATS = [
+  { value: '2026', label: 'Established', sub: 'Built on modern cloud standards' },
+  { value: '100%', label: 'IP Ownership', sub: 'Complete code handover guaranteed' },
+  { value: 'Sub-1s', label: 'Speed Target', sub: 'Engineered for conversion velocity' },
+  { value: 'Direct', label: 'Lead Engineers', sub: 'Zero non-technical middlemen' },
 ];
 
 export function AboutPage() {
-  usePageMeta('About', 'M.S Solutions is a software company building dependable web, mobile and SaaS products for small schools and growing businesses.');
+  usePageMeta(
+    'About Us & Engineering Mission',
+    'Learn about M.S Solutions — a professional digital solutions agency engineering custom web, e-commerce, mobile, and SaaS software for businesses internationally.'
+  );
   useScrollReveal();
 
   return (
-    <>
+    <div className="about-page">
+      {/* Page Hero */}
       <section className="page-hero">
         <div className="container about-hero">
-          <span className="eyebrow">About M.S Solutions</span>
-          <h1>We build software that organisations can rely on.</h1>
+          <span className="eyebrow">
+            <Sparkles size={14} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 6 }} />
+            About M.S Solutions
+          </span>
+          <h1>Powering businesses through practical, high-performance technology.</h1>
           <p className="lead">
-            M.S Solutions powers businesses through technology: dependable, human-centred software that is built
-            to grow with the people who use it.
+            M.S Solutions is a digital solutions agency dedicated to engineering dependable, human-centered software.
+            We partner with small businesses, emerging e-commerce brands, and startups to build custom platforms that solve
+            real commercial problems and scale reliably.
           </p>
         </div>
       </section>
 
-      <section className="section" id="philosophy" aria-label="Our philosophy">
+      {/* Agency Stats Band */}
+      <section className="section section--tint about-stats-section" aria-label="Key agency metrics">
+        <div className="container">
+          <div className="about-stats-grid">
+            {STATS.map((s) => (
+              <div key={s.label} className="about-stat-card reveal-on-scroll">
+                <span className="about-stat-card__val">{s.value}</span>
+                <span className="about-stat-card__label">{s.label}</span>
+                <span className="about-stat-card__sub">{s.sub}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className="section" id="philosophy" aria-label="Our engineering philosophy">
         <div className="container about-split">
           <ol className="about-pillars">
             {PILLARS.map(([t, d], i) => (
@@ -49,34 +105,45 @@ export function AboutPage() {
             ))}
           </ol>
           <figure className="figure reveal-on-scroll">
-            <img src={eduflow} width="1200" height="900" alt="Concept school portal showing a student list" loading="lazy" />
-            <figcaption>One of our school portal concepts. Illustrative data.</figcaption>
+            <img
+              src={businesspilotImg}
+              width="1200"
+              height="900"
+              alt="M.S Solutions executive dashboard concept representing clean technical architecture"
+              loading="lazy"
+            />
+            <figcaption>Our BusinessPilot architecture model: clean telemetry designed for clarity and speed.</figcaption>
           </figure>
         </div>
       </section>
 
-      <section className="section section--tint" id="approach" aria-labelledby="commit-title">
+      {/* Commitments Section */}
+      <section className="section section--tint" id="commitments" aria-labelledby="commit-title">
         <div className="container">
           <div className="section-head reveal-on-scroll">
             <div>
-              <span className="eyebrow">Our commitments</span>
-              <h2 id="commit-title">What to expect from us</h2>
+              <span className="eyebrow">Our Guiding Standards</span>
+              <h2 id="commit-title">What to expect when collaborating with us</h2>
             </div>
-            <p>Discipline from the first requirements conversation to production deployment.</p>
+            <p>From initial discovery and architectural modeling to production cloud deployment.</p>
           </div>
-          <ul className="principles">
+          <div className="why-grid">
             {COMMITMENTS.map(([t, d], i) => (
-              <li key={t} className={`reveal-on-scroll reveal-delay-${i + 1}`}>
+              <div key={t} className={`why-card reveal-on-scroll reveal-delay-${i + 1}`}>
+                <div className="why-card__icon-box">
+                  <ShieldCheck size={24} />
+                </div>
                 <h3>{t}</h3>
                 <p>{d}</p>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
-      <CtaBand title="Let's talk about your project." />
-    </>
+      {/* Bottom CTA */}
+      <CtaBand title="Let's build a practical digital solution for your business." />
+    </div>
   );
 }
 

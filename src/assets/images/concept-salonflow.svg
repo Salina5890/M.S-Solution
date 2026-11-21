@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%" fill="none">
+  <!-- Background -->
+  <rect width="1200" height="900" rx="24" fill="#0B132B"/>
+  <rect x="2" y="2" width="1196" height="896" rx="22" stroke="#1E293B" stroke-width="2"/>
+  
+  <!-- Subtle Gradient Glow -->
+  <circle cx="950" cy="200" r="300" fill="#2563EB" opacity="0.12" filter="blur(80px)"/>
+  <circle cx="250" cy="700" r="280" fill="#06B6D4" opacity="0.08" filter="blur(70px)"/>
+
+  <!-- Browser Chrome Top Bar -->
+  <rect x="60" y="50" width="1080" height="70" rx="14" fill="#151E36"/>
+  <circle cx="95" cy="85" r="7" fill="#EF4444"/>
+  <circle cx="120" cy="85" r="7" fill="#F59E0B"/>
+  <circle cx="145" cy="85" r="7" fill="#10B981"/>
+  
+  <!-- URL Bar -->
+  <rect x="180" y="68" width="540" height="34" rx="8" fill="#0B132B"/>
+  <text x="200" y="90" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">salonflow.app/booking/manhattan-studio</text>
+  
+  <!-- Badges right -->
+  <rect x="940" y="68" width="170" height="34" rx="8" fill="#1E293B"/>
+  <text x="965" y="90" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">LIVE SCHEDULER</text>
+
+  <!-- App Header inside browser -->
+  <rect x="60" y="140" width="1080" height="90" fill="#0F172A"/>
+  <text x="100" y="195" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">SalonFlow</text>
+  <text x="245" y="195" font-family="system-ui, sans-serif" font-size="15" font-weight="500" fill="#64748B">Aura Luxe Salon &amp; Wellness</text>
+  <rect x="880" y="165" width="220" height="42" rx="8" fill="#2563EB"/>
+  <text x="920" y="191" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Confirm Booking ($120)</text>
+
+  <!-- Step Indicator -->
+  <rect x="100" y="260" width="1000" height="50" rx="10" fill="#1E293B" opacity="0.6"/>
+  <text x="130" y="291" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#38BDF8">1. Select Service (Balayage &amp; Style)</text>
+  <text x="440" y="291" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">2. Stylist (Elena Rostova)</text>
+  <text x="760" y="291" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748B">3. Date &amp; Time (Today, 3:30 PM)</text>
+
+  <!-- Main Grid: Left Stylists, Right Calendar & Summary -->
+  <!-- Stylist Cards -->
+  <g transform="translate(100, 340)">
+    <!-- Card 1 (Selected) -->
+    <rect width="470" height="130" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+    <circle cx="55" cy="65" r="32" fill="#334155"/>
+    <text x="44" y="72" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">ER</text>
+    <text x="105" y="55" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Elena Rostova</text>
+    <text x="105" y="78" font-family="system-ui, sans-serif" font-size="14" fill="#94A3B8">Senior Colorist &middot; 4.98 ★ (420 reviews)</text>
+    <rect x="105" y="92" width="120" height="22" rx="4" fill="#0284C7" opacity="0.25"/>
+    <text x="115" y="108" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#38BDF8">SELECTED STYLIST</text>
+
+    <!-- Card 2 -->
+    <g transform="translate(0, 150)">
+      <rect width="470" height="130" rx="12" fill="#151E36" stroke="#334155" stroke-width="1"/>
+      <circle cx="55" cy="65" r="32" fill="#1E293B"/>
+      <text x="45" y="72" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#94A3B8">MC</text>
+      <text x="105" y="55" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#E2E8F0">Marcus Chen</text>
+      <text x="105" y="78" font-family="system-ui, sans-serif" font-size="14" fill="#64748B">Master Barber &amp; Texture &middot; 4.95 ★</text>
+      <text x="105" y="105" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#10B981">Available at 4:45 PM</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(0, 300)">
+      <rect width="470" height="110" rx="12" fill="#151E36" stroke="#334155" stroke-width="1"/>
+      <circle cx="55" cy="55" r="30" fill="#1E293B"/>
+      <text x="45" y="62" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#94A3B8">SV</text>
+      <text x="105" y="48" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#E2E8F0">Sofia Valente</text>
+      <text x="105" y="70" font-family="system-ui, sans-serif" font-size="13" fill="#64748B">Aesthetician &amp; Skincare &middot; 4.99 ★</text>
+      <text x="105" y="93" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Booked for today</text>
+    </g>
+  </g>
+
+  <!-- Right: Date & Time Picker Container -->
+  <g transform="translate(610, 340)">
+    <rect width="490" height="410" rx="14" fill="#151E36" stroke="#1E293B" stroke-width="1"/>
+    <text x="30" y="45" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Available Slots &mdash; Today, Nov 21</text>
+    
+    <!-- Time Slot Buttons -->
+    <g transform="translate(30, 75)">
+      <rect x="0" y="0" width="100" height="44" rx="8" fill="#1E293B"/>
+      <text x="24" y="27" font-family="system-ui, sans-serif" font-size="14" fill="#94A3B8">1:00 PM</text>
+
+      <rect x="110" y="0" width="100" height="44" rx="8" fill="#1E293B"/>
+      <text x="134" y="27" font-family="system-ui, sans-serif" font-size="14" fill="#94A3B8">2:15 PM</text>
+
+      <rect x="220" y="0" width="100" height="44" rx="8" fill="#2563EB"/>
+      <text x="244" y="27" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">3:30 PM</text>
+
+      <rect x="330" y="0" width="100" height="44" rx="8" fill="#1E293B"/>
+      <text x="354" y="27" font-family="system-ui, sans-serif" font-size="14" fill="#94A3B8">4:45 PM</text>
+    </g>
+
+    <!-- Booking Summary Box -->
+    <rect x="30" y="150" width="430" height="230" rx="10" fill="#0B132B" stroke="#334155" stroke-width="1"/>
+    <text x="50" y="185" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Appointment Summary</text>
+    
+    <text x="50" y="220" font-family="system-ui, sans-serif" font-size="14" fill="#94A3B8">Service: Signature Balayage + Blowout</text>
+    <text x="380" y="220" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">$120.00</text>
+    
+    <text x="50" y="250" font-family="system-ui, sans-serif" font-size="14" fill="#94A3B8">Deposit Required (Stripe 25%):</text>
+    <text x="390" y="250" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#10B981">$30.00</text>
+    
+    <line x1="50" y1="275" x2="430" y2="275" stroke="#1E293B" stroke-width="1"/>
+    
+    <text x="50" y="305" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Instant SMS Confirmation:</text>
+    <text x="260" y="305" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#38BDF8">Twilio / WhatsApp Sync</text>
+
+    <text x="50" y="340" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">Free cancellation up to 24 hours prior to appointment.</text>
+  </g>
+
+  <!-- Concept Stamp Footer -->
+  <rect x="60" y="810" width="1080" height="50" rx="8" fill="#111827"/>
+  <text x="85" y="842" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#F59E0B">CONCEPT DEMONSTRATION</text>
+  <text x="280" y="842" font-family="system-ui, sans-serif" font-size="13" fill="#94A3B8">M.S Solutions Custom Web &amp; Mobile Booking Engine Blueprint &middot; Illustrative Architecture</text>
+</svg>
