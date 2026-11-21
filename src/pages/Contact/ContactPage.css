@@ -1,7 +1,20 @@
 .contact { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); min-height: calc(100vh - var(--header-h)); }
 .contact__side { background: var(--navy-deep); color: #fff; padding: clamp(2.5rem, 6vw, 5rem) var(--gutter); display: flex; justify-content: flex-end; }
 .contact__side-inner { width: 100%; max-width: 30rem; }
-.contact__logo { width: 200px; margin-bottom: clamp(2.5rem, 6vw, 4.5rem); }
+.contact__logo-wrap { display: inline-block; margin-bottom: clamp(2rem, 5vw, 3.5rem); text-decoration: none; }
+.contact__logo {
+  width: 165px;
+  height: 165px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.15);
+  display: block;
+  transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.25s ease;
+}
+.contact__logo:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
 .contact__side h1 { color: #fff; font-size: clamp(2.2rem, 2.6vw + 1rem, 3.4rem); margin-bottom: 1.25rem; }
 .contact__side p { color: rgba(255, 255, 255, 0.78); }
 .contact__links { margin-top: 2.5rem; border-top: 1px solid rgba(255, 255, 255, 0.18); }

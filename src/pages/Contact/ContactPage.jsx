@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Mail, Phone, Facebook, Instagram, Linkedin, Globe, AlertCircle, CheckCircle2, Loader2 } from 'lucide-react';
-import logoWhite from '../../assets/brand/logo-full-white.png';
+import logoOfficial from '../../assets/brand/logo-official.jpg';
 import { BRAND } from '../../utils/navigation';
 import { SERVICES } from '../../data/servicesData';
 import usePageMeta from '../../utils/usePageMeta';
@@ -97,7 +97,15 @@ export function ContactPage() {
     <div className="contact">
       <aside className="contact__side">
         <div className="contact__side-inner">
-          <img className="contact__logo" src={logoWhite} alt="M.S Solutions" width="200" />
+          <Link to="/" className="contact__logo-wrap" title="M.S Solutions Home" aria-label="M.S Solutions, home">
+            <img
+              className="contact__logo"
+              src={logoOfficial}
+              alt="M.S Solutions — Powering Businesses Through Technology"
+              width="170"
+              height="170"
+            />
+          </Link>
           <h1>Let&rsquo;s talk about your project.</h1>
           <p>
             Tell us about your digital goals. Whether it is an e-commerce platform, a custom web application,
